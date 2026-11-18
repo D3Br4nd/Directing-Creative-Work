@@ -4,85 +4,114 @@
     {
       "id": 1,
       "prompt": "Scrivi il testo per la vetrina di un panificio di quartiere che apre il 3 dicembre in via del Pratello a Bologna. Si chiama Forno Nero, fa pane a lievitazione naturale e apre alle 7. Massimo 60 parole.",
-      "expected_output": "An Italian shop-window text of at most 60 words that keeps every fact (name, street, date, opening time, natural leavening), avoids generic bakery copy, is built on one anchor specific to this shop or street, and is followed by the Direction block and three next rounds, all with Italian headings.",
+      "expected_output": "An Italian window sign that communicates the opening at a glance within the word limit.",
       "files": [],
       "assertions": [
-        "The piece is in Italian and has at most 60 words",
-        "The piece contains Forno Nero, via del Pratello, 3 dicembre and the 7 o'clock opening",
-        "The piece contains none of the phrases 'tradizione e innovazione', 'passione', 'qualità' or 'come una volta'",
-        "The piece is not a parody of an official notice or other document",
-        "The Direction block and next rounds use Italian headings",
-        "The Direction block names a broken rule and gives a reason tied to the reader",
-        "Exactly three numbered next rounds follow the Direction block"
+        "The reply is in Italian and the sign is at most 60 words.",
+        "The sign conveys Forno Nero, via del Pratello in Bologna, 3 December, the 7 o’clock opening and natural leavening.",
+        "A detail such as the hour or the leavening shapes what the reader imagines beyond the address and opening information.",
+        "The sign makes no unsupported claims about the street, its residents or the business."
       ]
     },
     {
       "id": 2,
       "prompt": "can you make this less generic? it's the hero of our landing page for a shared shopping-list app for flatmates: \"Empower your household with seamless collaboration. Organize, share and simplify your life.\"",
-      "expected_output": "A rewritten English headline and subline for a flatmates' shopping-list app, built on a concrete domestic scene rather than abstract benefits, with the Direction block naming the banned defaults and the broken rule, and three next rounds.",
+      "expected_output": "An English headline and subline grounded in a recognizable shared-flat situation.",
       "files": [],
       "assertions": [
-        "The rewrite contains none of the words empower, seamless, simplify or collaboration",
-        "The rewrite mentions a concrete object, place or situation from shared-flat life",
-        "The rewrite claims no product feature the prompt did not mention",
-        "The Direction block lists what was avoided and one broken rule with its reason",
-        "Each Direction bullet is one sentence and the block is under 80 words",
-        "The reply delivers the rewritten copy before any explanation"
+        "The reply leads with usable hero copy.",
+        "The scene makes the purpose of a shared shopping list intelligible and replaces the abstract benefits in the source.",
+        "The copy claims no feature beyond the shared list."
       ]
     },
     {
       "id": 3,
       "prompt": "Make the message our banking app shows when a bank transfer fails more creative. Right now it says: \"Error 402. Operation failed.\"",
-      "expected_output": "A calm, clear English error message that says what happened, addresses whether money left the account without inventing it, and says what to do next, with warmth but no jokes. The notes state that no rule was broken, or that only a minor convention of form was, and why, and a To check line lists what the team must confirm.",
+      "expected_output": "A short failed-transfer message with the original identifier and clearly marked fields for the unresolved customer questions.",
       "files": [],
       "assertions": [
-        "The message contains no joke, pun or playful exclamation",
-        "The message addresses whether the money was debited only through a placeholder, never as an unverified statement",
-        "The message tells the user what to do next",
-        "The Direction block explains the restraint with a reason tied to the user's situation",
-        "The message does not invent facts the prompt did not give, such as a specific refund time",
-        "Brackets in the message hold only data to fill in; caveats and conditions sit in the To check line, not inside the message"
+        "The message identifies the failed transfer and preserves code 402.",
+        "The message reserves a field for the verified debit status and a field for a verified next step.",
+        "The message promises no account state, refund time, safe retry, available control or support channel that the brief did not establish.",
+        "Any instructions for the team to fill in the fields appear separately from customer copy."
       ]
     },
     {
       "id": 4,
       "prompt": "Write a LinkedIn post announcing that our logistics company, Ferrando Transport, has achieved ISO 14001 certification. Brand guidelines: institutional tone, no emoji, no exclamation marks, 120 words maximum. Make it a bit less boring than usual.",
-      "expected_output": "An English LinkedIn post of at most 120 words that respects every brand rule, breaks a convention only inside them, and uses placeholders for facts not given, such as the certifying body or the date.",
+      "expected_output": "An institutional post announcing the supplied certification, with a deliberate opening and no invented supporting claims.",
       "files": [],
       "assertions": [
-        "The post has at most 120 words",
-        "The post contains no emoji and no exclamation mark",
-        "The tone stays institutional: no line reads as a joke, a pun or mockery of the company or the certification",
-        "The post does not open with 'We are proud to announce' or a close variant",
-        "Facts not in the prompt, such as the certifying body, audit dates or emission figures, appear only as bracketed placeholders",
-        "The Direction block says which brand rule shaped the choice"
+        "The post names Ferrando Transport and ISO 14001, uses no emoji or exclamation marks, and stays within 120 words.",
+        "Its opening conveys the news without a stock expression of pride.",
+        "The post preserves an institutional voice without adding unverified certifiers, dates, emissions reductions or operational practices."
       ]
     },
     {
       "id": 5,
       "prompt": "dame tres ideas fuera de lo común para el vídeo de lanzamiento de nuestro helado de sésamo negro",
-      "expected_output": "Three fully developed video ideas in Spanish, each with its own short direction (broken rule and anchor), differing in their anchor, followed by one shared next-rounds list, with every heading in Spanish.",
+      "expected_output": "Three distinct Spanish launch-video concepts with an observable action and a role for the product in each.",
       "files": [],
       "assertions": [
-        "The whole reply, headings included, is in Spanish",
-        "Exactly three ideas are given, each developed enough to brief a crew",
-        "Each idea is followed by its own broken rule and anchor",
-        "The three ideas rest on different anchors, not variations of one",
-        "One shared next-rounds list closes the reply",
-        "The reply invents no shop name, date or address; missing ones are placeholders"
+        "The answer presents exactly three launch concepts in Spanish.",
+        "For each concept a crew can identify what happens on screen and how it introduces black sesame ice cream.",
+        "The three concepts differ in their central action or storytelling mechanism.",
+        "Proposed scenes are recognizable as concepts and introduce no factual claims about the brand."
       ]
     },
     {
       "id": 6,
       "prompt": "mi serve un nome per la mia newsletter sul vino naturale, ma niente di banale tipo 'Vino Vivo'",
-      "expected_output": "In Italian: a recommended name first, then four to six finished alternatives with different anchors, the Direction block in one-sentence bullets, three next rounds, and a To check line about checking availability.",
+      "expected_output": "One recommended Italian newsletter name and a short list of distinct alternatives when the user leaves the count open.",
       "files": [],
       "assertions": [
-        "The reply leads with one recommended name, followed by four to six alternatives of one line each",
-        "No name is a portmanteau, a Latin root or a word ending in -ify, -ly or -io",
-        "Each Direction bullet is a single sentence and the block is under 80 words",
-        "Exactly three next rounds follow",
-        "Nothing appears after the To check line"
+        "A recommended name appears first, with four to six alternatives.",
+        "The names take meaningfully different approaches to natural wine and avoid the example the user rejected.",
+        "The response makes no claim of verified domain or trademark availability."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Scrivi un microracconto su due fratelli che dopo dieci anni si rivedono al deposito bagagli di un aeroporto. Inventa tu i nomi. Solo il racconto, massimo 75 parole.",
+      "expected_output": "A standalone Italian story with invented characters and a scene at the airport.",
+      "files": [],
+      "assertions": [
+        "The entire reply is an Italian story of at most 75 words, with no headings, placeholders or direction notes.",
+        "Two named brothers meet at an airport baggage deposit after ten years.",
+        "An action or exchange makes their relationship perceptible."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Mi servono esattamente due nomi in francese per un coro che prova nel parcheggio sotterraneo. Restituisci soltanto un array JSON di stringhe.",
+      "expected_output": "A parseable two-string JSON array of French names for the choir.",
+      "files": [],
+      "assertions": [
+        "The complete response parses as a JSON array of exactly two distinct, nonempty strings, without Markdown fences.",
+        "The names are in French and evoke the sound, space or shared activity of rehearsing underground.",
+        "There is no extra recommendation, label or commentary."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Our poster for a repair café reads “Unlock a better tomorrow. Repair together.” Tell me why it feels generic. Feedback only.",
+      "expected_output": "A critique grounded in the supplied poster wording.",
+      "files": [],
+      "assertions": [
+        "The critique points to particular words and explains their effect on a passerby.",
+        "It identifies a decision the writer could revisit while preserving the repair café context.",
+        "It contains no replacement slogan or rewritten poster."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Schreibe nur die letzte Zeile neu, damit der Schluss weniger pathetisch klingt. Gib das ganze Gedicht mit denselben Zeilenumbrüchen zurück.\n\nZwei Tassen im Spülbecken.\nDein Schlüssel liegt daneben.\nDie Ewigkeit zerbricht.",
+      "expected_output": "A three-line German poem with a revised final line.",
+      "files": [],
+      "assertions": [
+        "The first two lines and their punctuation match the source exactly and occupy the same lines.",
+        "Only the third line changes, and its tone is more restrained than the original ending.",
+        "The complete reply contains only the three-line poem."
       ]
     }
   ]

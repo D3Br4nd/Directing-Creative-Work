@@ -2,6 +2,14 @@
 
 All notable changes to this skill are recorded here. Versions follow [Semantic Versioning](https://semver.org) and match `metadata.version` in `skills/directing-creative-work/SKILL.md`.
 
+## [0.5.0] - 2026-11-18
+
+- Made the requested deliverable, language, count and edit scope take precedence over the default creative review. Short functional copy now carries only essential editorial checks.
+- Distinguished invented story details and proposed scenes from real-world claims. Missing transaction status and recovery actions require confirmation before publication.
+- Replaced the fixed sketch quota with exploration proportionate to the brief. The transplant test now asks whether changing a detail would change a creative choice.
+- Added regression cases for fiction, exact JSON, critique and narrow revisions. Updated the original evaluations to assess the delivered work and expanded the multilingual activation queries.
+- Corrected the repository validator's handling of malformed evaluation data.
+
 ## [0.4.0] - 2026-11-18
 
 First public release.

@@ -359,8 +359,7 @@ def check_evals(skill_dir, name, prefix, report):
             data = json.loads(read_text(evals_path))
         except ValueError as exc:
             report.error(where, "not valid JSON: %s" % exc)
-            data = None
-        if data is not None:
+        else:
             if not isinstance(data, dict) or not isinstance(data.get("evals"), list):
                 report.error(where, "expected an object with 'skill_name' and an 'evals' array")
             else:
@@ -374,14 +373,22 @@ def check_evals(skill_dir, name, prefix, report):
                     if not isinstance(case, dict):
                         report.error(where, "test case %d is not an object" % position)
                         continue
-                    if case.get("id") in seen or case.get("id") is None:
-                        report.error(where, "test case %d needs a unique 'id'" % position)
-                    seen.add(case.get("id"))
+                    case_id = case.get("id")
+                    if type(case_id) not in (int, str) or case_id == "" or case_id in seen:
+                        report.error(where, "test case %d needs a unique integer or nonempty string 'id'" % position)
+                    else:
+                        seen.add(case_id)
                     for key in ("prompt", "expected_output"):
                         if not isinstance(case.get(key), str) or not case[key].strip():
                             report.error(where, "test case %d has no %r text" % (position, key))
-                    for listed in case.get("files") or []:
-                        if not (skill_dir / str(listed)).exists():
+                    files = case.get("files", [])
+                    if not isinstance(files, list):
+                        report.error(where, "test case %d 'files' must be a list of paths" % position)
+                        continue
+                    for listed in files:
+                        if not isinstance(listed, str) or not listed.strip():
+                            report.error(where, "test case %d lists an invalid file path" % position)
+                        elif not (skill_dir / listed).is_file():
                             report.error(where, "test case %d lists a missing file: %s" % (position, listed))
     queries_path = skill_dir / "evals" / "eval_queries.json"
     where = prefix + "evals/eval_queries.json"

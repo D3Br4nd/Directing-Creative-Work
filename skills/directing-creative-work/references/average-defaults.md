@@ -111,17 +111,17 @@ Each move breaks one convention. Use it only when you can say what it does for t
 - Let the layout follow something true of this business (how its work is done, the shape of its place) instead of a template or a generic print object.
 - Give empty states, errors and 404 pages candid human copy.
 - Add one micro-interaction that rewards curiosity, and keep every interaction accessible by keyboard.
-- Deliver a working prototype, not a description of one.
+- For a prototype brief, check the interaction in the working prototype. For a concept brief, show the proposed interaction at the requested fidelity.
 
 **Music and audio**
 - Drop a beat at a turnaround, move the bridge into an odd meter, or delay the chorus with two bars of near silence.
 - Strip the arrangement to one dry voice and one instrument before the full texture arrives.
 - Use slant and internal rhymes, and phrases that spill across the bar line.
-- Always state tempo, meter, key or mode, instrumentation and the dynamic arc.
+- For an arrangement brief, give the performer the cues they need, such as tempo, instrumentation and how the dynamics change.
 
 ## Where to look instead
 
-Anchors come from outside the medium's usual pool of references. Start with the brief itself, because an anchor taken from it passes the transplant test by construction. Places worth trying:
+Look first for a detail in the brief that changes a creative decision. Opening hours can shape the rhythm of a scene. A street name alone may only decorate an interchangeable idea. Other places to look include the following.
 
 - The user's own world: a fact in the brief that no competitor shares, such as their street, their hours, their process, their customers' actual words.
 - Local specifics: one street's reputation, one shop sign, one dialect word, one regional habit.

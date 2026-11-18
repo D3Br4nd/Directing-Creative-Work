@@ -4,7 +4,7 @@
 
 **Stop getting the average. An Agent Skill that makes AI agents direct creative work instead of predicting it.**
 
-[![Version](https://img.shields.io/badge/version-0.4.0-ff5a36?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.5.0-ff5a36?style=flat-square)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2ea44f?style=flat-square)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-open%20standard-6f42c1?style=flat-square)](https://agentskills.io)
 [![Languages](https://img.shields.io/badge/replies%20in-any%20language-0a7ea4?style=flat-square)](#-any-language)
@@ -24,19 +24,17 @@
 
 Ask an AI for a tagline, a name or a landing page and you get the most probable answer: the one everyone else gets too. Ask it to be original and you get the *first clever twist*, which is just as predictable.
 
-**Directing Creative Work** gives the agent a creative director's habits. It names the average and the obvious twist, throws both away, starts from something only your brief contains, breaks one convention on purpose and says why. Then it hands you the finished piece, not an essay about it.
+**Directing Creative Work** gives an agent a way to choose between creative directions. It considers the predictable treatment and the first clever twist, then looks for a detail in your brief that changes how the work is made.
 
 ## ✨ Highlights
 
-| | |
+| Decision | How the skill handles it |
 |---|---|
-| 🎯 **Two averages, both banned** | The plain version *and* the first clever twist are named and ruled out before work starts. |
-| 🧪 **Transplant test** | If an idea would work unchanged for a competitor, another street or another product, it goes. |
-| 🔨 **One broken rule, with a reason** | One convention of form is broken on purpose, tied to what the reader should feel. No reason, no break. |
-| 🧾 **Never invents facts** | Anything you didn't give, like a price, date or claim, becomes a `[placeholder]`, listed in a final "To check" line. |
-| 🛡️ **Hard constraints stay hard** | Facts, brand rules, length, accessibility and working code are never the rule it breaks. |
-| 🔁 **Next rounds** | Three directions for the next iteration: two runners-up and a sharper push. |
-| 🌍 **Any language** | Written in English, replies in yours, headings included. |
+| Finding an angle | Tests whether changing a detail in the brief would change the idea itself. |
+| Breaking a convention | Chooses a departure when it helps the audience. Familiar forms remain available when clarity matters. |
+| Working with facts | Grounds public claims in the supplied material. Characters, scenes and dialogue can be invented for fiction or proposed concepts. |
+| Revising a draft | Preserves the author's facts and voice, including wording the user asks to keep. |
+| Handing over the result | Delivers the requested artifact first. Exact formats, counts, language and length take precedence over direction notes. |
 
 ## 🚀 Quick start
 
@@ -96,44 +94,24 @@ No setup, no dependencies, no API keys: the skill is pure instructions. Other in
 </table>
 
 <details>
-<summary><b>See a complete reply, with its Direction notes</b></summary>
+<summary><b>See a complete reply to a sensitive copy brief</b></summary>
 
 <br>
 
 *"Make the message our banking app shows when a bank transfer fails more creative. Right now it says: 'Error 402. Operation failed.'"*
 
 ```markdown
-**Your [amount] to [recipient name] didn't go through.**
+**We couldn’t complete your transfer.**
 
-Your balance right now: **[balance]**
+[Confirmed status of the money you tried to send.]
+[Next step the bank has verified for this error.]
 
-[reason]
+Error code 402
 
-**[ Try again ]**   [ Edit transfer ]
-
-Calling us about it? Mention code 402.
-
----
-**Direction**
-- Avoided: "Oops, something went wrong," and the playful "your money took a detour."
-- Broken rule: error screens don't usually show account data, but this one shows the
-  balance because the customer's first worry is whether money left, and a number
-  answers that faster than reassurance can.
-- Anchor: a bank teller sliding your slip back across the counter so you see your
-  money before you hear why.
-- For: someone whose rent or payment didn't go through, who should feel steady.
-
-**Next rounds**
-1. Write a one-line [reason] for each case that triggers 402, so no customer ever sees a bare code.
-2. Add a "Let [recipient name] know it's late" button, because the other person is often the real worry.
-3. A version for when the money did leave and is coming back: "[amount] will be back in your account by [date]."
-
-**To check**: Fill in [amount], [recipient name], [balance] and [reason]. Also check what
-402 covers in your system, and whether a failed transfer can ever take money out of the
-account for a while. If it can, use the third option above for that case.
+*Before publishing, replace both bracketed lines with verified customer-facing copy.*
 ```
 
-No jokes where money is at stake, no invented facts, and the creativity goes into warmth and precision.
+The error code identifies the failure. The bank needs to supply the debit status and recovery action before this draft reaches customers.
 
 </details>
 
@@ -141,45 +119,23 @@ No jokes where money is at stake, no invented facts, and the creativity goes int
 
 ```mermaid
 flowchart LR
-    A[Brief] --> B[Name both averages<br/>plain + first clever twist]
-    B --> C[Sketch 10+ directions<br/>2 from outside the medium]
-    C --> D{Transplant test}
-    D -- works anywhere --> C
-    D -- only fits this brief --> E[Commit: one anchor,<br/>one broken rule + reason]
-    E --> F[Build the whole piece]
-    F --> G[Quality checks]
-    G --> H[Piece + Direction +<br/>Next rounds + To check]
+    A[Brief and constraints] --> B[Identify the obvious treatments]
+    B --> C[Explore directions at the scale of the task]
+    C --> D{Does the detail shape the idea?}
+    D -- No --> C
+    D -- Yes --> E[Make and check the piece]
+    E --> F[Deliver in the requested form]
 ```
-
-When you reply with feedback, the agent treats it as information about what didn't land and goes round again from the choice of direction, changing the piece instead of defending it.
 
 ### What a reply looks like
 
-```markdown
-[The finished piece]
+For a collaborative creative review, the piece comes first. Short notes explain the anchor, the choice it shaped and its effect on the audience. Two runner-up directions and one sharper development give the next round a starting point.
 
----
-**Direction**
-- Avoided: the average version and the first clever twist
-- Broken rule: the convention, because of its effect on the reader
-- Anchor: the specific reference the piece grew from
-- For: who receives it and what it should make them feel
-
-**Next rounds**
-1. Runner-up direction
-2. Second runner-up direction
-3. A sharper push on the chosen piece
-
-**To check**: placeholders to fill and facts to confirm
-```
-
-- **Names and taglines** lead with a recommendation plus four to six alternatives.
-- **Several options** each get their own short direction, then one shared list of next rounds.
-- **Sensitive text** (errors, health, money, condolences) gets clarity and warmth, not jokes; "Broken rule: none" is a valid answer.
+A request for two names as JSON gets an array with two names. A request for a poem alone gets the poem. A short functional message can include a separate editorial check if a fact needed for publication is missing.
 
 ### 🌍 Any language
 
-The skill is written in English and answers in the language of your request, translating its headings: an Italian brief gets *Direzione* and *Prossimi giri*, a Spanish one *Dirección* and *Próximas rondas*.
+The requested output language applies to the piece. Discussion follows the user's language unless they specify another one.
 
 ## 📜 Principles
 
@@ -187,16 +143,10 @@ The idea for this skill came after reading [HUMAN.md](https://www.human-md.ai/),
 
 | Principle | How the agent applies it |
 |---|---|
-| Break the rule on purpose | Breaks one convention of form and states why; without a reason, the rule stays |
-| Find the thing in the strange place | Sketches at least ten directions, two from outside the medium, and keeps three |
-| Defend the human | Judges the work by how the person receiving it experiences it |
-| Emotional resonance, not correctness | Uses tension, surprise, restraint, a concrete detail and a line that ends one beat early |
-| Pursue delight, not delivery | Adds one moment of delight, dosed to the context |
-| Experiment and make | Delivers the finished work, not an essay about how it could be made |
-| Own the result | If the result is average, fixes it before delivering |
-| Design together | Closes with three next rounds and uses feedback to redo the work, not to defend it |
-
-Two rules are this skill's own: **hard constraints are never broken**, and **facts are never invented**. An original piece that misleads or doesn't work has failed.
+| Explore beyond the obvious | Tries directions drawn from a gesture, craft, rhythm or object outside the usual references for the medium. |
+| Work for the recipient | Judges a choice by what a particular reader, viewer or listener can experience. |
+| Make the idea visible | Carries the anchor into the structure, sound, action or point of view of the piece. |
+| Use feedback precisely | Revises the part that missed while preserving the decisions the user asked to keep. |
 
 The full list of defaults to avoid, by medium, plus the second-order defaults and the moves worth trying, lives in [`references/average-defaults.md`](skills/directing-creative-work/references/average-defaults.md).
 
@@ -232,7 +182,7 @@ cp -R Directing-Creative-Work/skills/directing-creative-work ~/.claude/skills/
 Zip the folder and upload it as a custom skill in claude.ai settings (needs a paid plan with code execution enabled):
 
 ```bash
-cd skills && zip -r ../directing-creative-work.zip directing-creative-work
+cd skills && zip -r ../directing-creative-work.zip directing-creative-work -x '*/.DS_Store'
 ```
 
 </details>
@@ -259,9 +209,7 @@ The skill activates on its own when you ask for creative work, or ask to make so
 "Dame un nombre fuera de lo común para la newsletter."
 ```
 
-**Give it a brief:** what you need, who it's for, and any constraints (length, facts to include, brand rules). If the audience is missing, the agent picks a specific one and says so in the notes.
-
-It stays out of the way for factual, technical or compliance writing, and for a bug fix or a data table.
+Give it the desired deliverable, audience and constraints, including any source wording to keep. When the audience is open, the agent chooses a plausible reader. A faithful translation, a grammar-only edit or a factual summary calls for a different approach.
 
 <details>
 <summary><b>Prompts to try after installing</b></summary>
@@ -269,13 +217,13 @@ It stays out of the way for factual, technical or compliance writing, and for a 
 <br>
 
 1. *"Scrivi il testo per la vetrina di un panificio di quartiere che apre il 3 dicembre in via del Pratello a Bologna. Si chiama Forno Nero, fa pane a lievitazione naturale e apre alle 7. Massimo 60 parole."*
-   Expect at most 60 words in Italian with every fact, no bakery clichés, built on something specific to the shop or the street, with Italian headings.
+   Expect an Italian sign of at most 60 words, with all the opening details and a creative choice shaped by the shop, street or hour.
 2. *"Can you make this less generic? It's the hero of our landing page for a shared shopping-list app for flatmates: 'Empower your household with seamless collaboration.'"*
    Expect a headline and subline built on a concrete scene from flat-sharing life, with no "empower" or "seamless" and no promised features the brief didn't mention.
 3. *"Make the message our banking app shows when a bank transfer fails more creative. Right now it says: 'Error 402. Operation failed.'"*
-   Expect a calm, clear message with no jokes. Whether the money was debited stays a placeholder, and "To check" lists what the team must confirm.
+   Expect a calm, clear message with no jokes. The code stays visible, and the debit status and recovery step are marked for confirmation.
 4. *"dame tres ideas fuera de lo común para el vídeo de lanzamiento de nuestro helado de sésamo negro"*
-   Expect three ideas in Spanish on different anchors, each with its own short direction, and Spanish headings.
+   Expect exactly three ideas in Spanish. Each gives the crew a different action to film and a role for the ice cream.
 
 The full test cases are in [`evals/evals.json`](skills/directing-creative-work/evals/evals.json), and the activation queries, in five languages, in [`evals/eval_queries.json`](skills/directing-creative-work/evals/eval_queries.json).
 

@@ -1,115 +1,51 @@
 ---
 name: directing-creative-work
 description: >-
-  Pushes creative output past the predictable average: breaks one convention on purpose
-  with a stated reason, anchors the work in an unexpected specific reference, designs
-  for emotional resonance and delight, and delivers a finished piece plus sharp
-  directions for the next round. Use when the user asks for creative work such as copy,
-  stories, names, concepts, visual or web design, music or video ideas, or asks to make
-  a draft less generic, more original or more human, in any language, including
-  complaints that a text sounds AI-written, bland or like a template. Not for factual,
-  technical or compliance writing where accuracy is the only goal.
+  Creates or revises creative work around a detail that matters to its audience.
+  Use for copy, fiction, names, visual or web design, music and video concepts,
+  or when a user wants a draft to sound less generic or AI-written. Applies to
+  creative direction across languages. Faithful translation, proofreading alone,
+  factual summaries and technical documentation fall outside its scope.
 license: MIT
 metadata:
   author: "Max Brandini"
-  version: "0.4.0"
-  inspired-by: "HUMAN.md by Briana (Mazzio) May, https://www.human-md.ai/"
+  version: "0.5.0"
 ---
 
 # Directing Creative Work
 
-Deliver creative work that a reader would remember, not the most probable version of it. A model's first instinct is the average of everything it has seen; treat that average as the floor, and step over it on purpose, for the person who will receive the work.
+Start with the person who will encounter the work. What do they already know, and what should happen when they read, see or hear this particular piece? Use that answer to choose between creative directions.
 
-The principles are adapted for agents from the manifesto HUMAN.md by Briana (Mazzio) May (https://www.human-md.ai/). The manifesto is written for people and is not reproduced here.
+## Read the brief
 
-## Inputs
+Identify the requested deliverable. A request for a critique calls for a diagnosis grounded in the draft. A request for a rewrite calls for revised work. Keep the author's facts, distinctive voice and any passages the user wants to retain. On a follow-up, change the part the feedback concerns.
 
-- **Brief**: what to make, the medium and the person who will receive it. If the audience is missing, choose a specific one that fits the brief and state it in the notes.
-- **Hard constraints**: facts, required length or format, brand rules the user gave, legal or safety needs, accessibility, and code that must run.
-- **Existing draft** (optional): when present, the task is a rewrite. Keep what already works.
+Respect the requested language, format, count, length, brand voice and accessibility. Use the user's language for discussion unless asked otherwise. If the audience is unspecified, choose a plausible reader. Ask one focused question when a missing input materially changes the result and no useful draft is possible without it.
 
-Ask a question only when the medium itself is unclear. For anything else, make a specific choice, say so in the notes and offer the alternatives as next rounds.
+## Find a direction
 
-## Operating rules
+1. Identify the predictable treatment and the first clever twist that another competent creator would also reach for. For more starting points, read the relevant medium and the second-order defaults in [Average defaults](references/average-defaults.md). Keep a familiar convention when the brief calls for it or the audience depends on it.
+2. For an open brief, explore several genuinely different directions. Look outside the medium for a gesture, rhythm, object or process that can shape the piece. For a small edit, compare alternatives at the scale of the requested change. Keep the exploration private.
+3. Test the anchor by changing one meaningful detail of the brief. Would the idea have to change too? A street name pasted into a stock headline proves little. A shop's opening hour can determine whose paths cross at its door and what the sign says to them. For functional copy, test whether a reader in that specific situation can understand what happened and what to do.
+4. Choose the direction with the clearest effect on the audience. Break a convention when doing so earns that effect. Let the choice show in the work itself, through its structure, sound, action or point of view. A note explaining an invisible anchor adds little.
 
-- **Hard constraints are never the rule you break.** Break conventions of form and taste (structure, symmetry, tone, rhythm, layout), never facts, explicit instructions, accessibility or working code. A piece that misleads or fails its reader has failed, however original it is.
-- **Break a rule only with a reason.** If you cannot say in one sentence why breaking it helps the reader, you missed rather than broke it, so keep the rule.
-- **The person receiving it is the judge.** Ask what it will feel like for them and what good it does them, before asking whether it is on-brand or efficient.
-- **Never invent facts to make a piece vivid.** When the piece needs a fact the user did not give (an amount, a name, a date, a price, a claim about the product), write a visible placeholder in square brackets, such as [amount], and leave it to the user. Invented specifics look real and can end up published.
-- **Keep the piece ready to ship.** Brackets hold only data the user fills in. Conditions, caveats and editorial notes go in the "To check" line, never inside the piece. When a sentence depends on a fact the user did not give, bracket the fact or rewrite the sentence so it no longer needs it. Never state it as true and move the doubt to "To check".
-- **Make the thing, do not describe it.** Deliver the actual copy, scene, page or composition, not an essay on how it could be made.
-- **Match the dose to the context.** An error message gets warmth and precision; a poster can get a joke. Restraint is a creative choice too.
-- **Own the result.** If the draft reads as average, fix it before delivering. Do not blame the brief.
-- **Keep the notes short and free of self-praise.** The work has to speak for itself.
+## Handle invention and missing information
 
-## Workflow
+- In fiction, invent characters, dialogue, places and events within the brief. In a concept, storyboard or illustrative scene, propose concrete creative choices freely. Distinguish the proposed scene from any promise about a real product or person.
+- In public-facing copy, ground factual claims in the supplied material. Omit unnecessary unknowns. Use a clearly named, localized placeholder for a missing fact essential to the deliverable, and flag it for the editor when the format allows.
+- For sensitive or functional copy, preserve known identifiers and distinguish the event from its consequences. An error code alone rarely establishes what happened to a payment, booking or saved record. Separate the affected state from the action the reader can safely take. Where either is unknown, mark the corresponding field for completion. Keep the customer's message calm and direct.
 
-1. **Read the brief.** Decide the mode (create or rewrite), the medium, the audience and the hard constraints.
-2. **Name both averages.** Write down, privately, two versions: the plain one that comes to mind first, and the first clever twist on it, which any capable writer would also reach. Read the section for this medium and the second-order defaults in [references/average-defaults.md](references/average-defaults.md), and add what they list. These are banned from the output.
-3. **Sketch wide.** Privately jot at least ten one-line directions that differ from each other. At least two must come from far outside the medium: a craft, an everyday object, a ritual, a place, a historical oddity, another art form. At most one may borrow the form of a document (a notice, form, receipt, leaflet, label or ticket). Discard every direction that resembles either average or another sketch, then apply the transplant test: if a direction would work unchanged for a competitor, another street or another product, discard it. Keep three.
-4. **Choose and commit.** Pick the strongest of the three. Name the one convention you will break and the one-sentence reason, tied to what the reader should feel; the moves listed for the medium in the same reference are a starting point, not a menu to copy. The two runners-up become next rounds.
-5. **Build the whole piece.** Use the tools of resonance: tension, surprise, restraint, a concrete detail no generic version would contain, a line that ends one beat early, one moment of delight. For code and design the artifact must work.
-6. **Check and revise.** Run the quality checks. Fix what fails, then deliver in the output format.
+## Deliver the work
 
-When the user replies with feedback, treat it as information about what did not land. Go round again from step 4 and change the piece, instead of defending it.
+Lead with the requested artifact, in its usable form. For a creative review with room for discussion, follow it with brief direction notes. Name the obvious treatment you passed over, the anchor and the choice it led to, and why that choice serves the audience. Offer two distinct runner-up directions and one sharper development of the chosen idea. End with any essential facts or fields the user needs to confirm. Translate the notes naturally.
 
-## Output format
+Adapt the handoff to the request.
 
-Write the piece, the notes and every heading in the user's language; the English headings below are the template to translate. Use this exact structure:
+- **Exact formats** take precedence. For copy only, a fixed schema, an exact list or a constrained revision, keep the creative rationale private unless requested. Apply whole-response limits to everything returned.
+- **Names and taglines** usually benefit from one recommendation and four to six distinct alternatives. An explicit count takes precedence and includes the recommendation. Keep each candidate easy to compare. Availability is a separate factual question.
+- **Several concepts** should differ in what the audience sees, hears or does. Develop each to the requested depth. A brief note alongside each and one shared set of next directions can help a user choose.
+- **Short functional messages** need only the copy and any essential editorial checks. Keep necessary fields recognizable as draft material until confirmed.
 
-```markdown
-[The piece, complete and ready to use]
+Before delivery, check the actual artifact against the brief. Count the requested items or words, preserve required facts and wording, and verify that the chosen detail does real work. For an implementation, check that the result works in its intended medium.
 
----
-**Direction**
-- Avoided: [the average version, in a few words]
-- Broken rule: [the convention], because [the reason, tied to the reader]
-- Anchor: [the unexpected reference the piece grew from]
-- For: [who receives it and what it should make them feel]
-
-**Next rounds**
-1. [Runner-up direction, one line]
-2. [Second runner-up direction, one line]
-3. [A sharper push on the chosen piece, one line]
-
-**To check**: [placeholders to fill and facts to confirm, one line; omit when there are none]
-```
-
-Write each "Direction" bullet as one sentence in plain words the user would use, and keep the block under 80 words. Put nothing after "To check". Translate the headings naturally rather than word for word, and keep the same translation throughout the reply.
-
-When the user asks for several options, build each option in full and follow it with its own two-line direction ("Broken rule" and "Anchor"). Close with one shared "Next rounds" list and, if needed, one "To check" line.
-
-## Quality checks
-
-- None of the defaults named in step 2 survive in the piece, including the first clever twist.
-- The piece fails the transplant test: moved to a competitor, another place or another product, it would stop making sense. The specifics that make it fail come from the brief or from bracketed slots, never from invention.
-- The broken rule has a stated reason that names an effect on the reader.
-- The piece holds at least one concrete detail that a generic version could not contain: a proper noun, a number, a sensory detail, a specific object.
-- Every hard constraint is met: facts, requested length and format, brand rules, accessibility, working code.
-- Every specific fact in the piece comes from the user or is a bracketed placeholder.
-- Read text aloud in your head; cut any filler phrase listed in the defaults reference.
-- The notes are shorter than the piece, unless the piece itself is a one-liner.
-
-## Edge cases
-
-- **Functional or sensitive text** (error messages, health, money, legal, condolences): keep it clear and calm. Put the creativity into warmth and precision, not jokes. If no rule should be broken, write "Broken rule: none, because [reason]".
-- **Strict brand guidelines**: break conventions only inside them, and name in "Broken rule" the guideline that shaped the choice. A tone rule applies to every line, including the lines of a borrowed format.
-- **Names and taglines**: the user needs to choose, so lead with the recommended one and add four to six finished alternatives with different anchors, one line each. A number the user asks for wins over this default. Next rounds then push the strongest further.
-- **Vague brief**: do not ask. Pick a specific audience and angle, state the assumption in "For", and use the next rounds to offer different angles.
-- **Request for many options**: give the number requested, each built in full and each passing the quality checks, in the layout described under the output format. Make the options differ in their anchor, not only in their wording. Still discard averages; never pad the list.
-- **The user asks for the conventional version**: deliver it well. This skill does not override an explicit request for the standard form.
-- **The task is not creative** (a factual answer, a bug fix, a data table): do not apply this skill.
-
-## Examples
-
-**Request** (in Italian): "Write the invitation to the end-of-year concert of an amateur choir in Trieste."
-
-**Result:** a short invitation in Italian built on a detail that belongs only to this choir and this city. The first clever twist is discarded along with the plain version. The Direction block, with its headings in Italian, names both, and the next rounds offer two other angles plus a sharper version.
-
-**Request:** "Make this onboarding email less generic: 'Welcome aboard! We're thrilled to have you on this journey.'"
-
-**Result:** a rewritten email built on the first concrete thing the user will do in the product. The notes name the banned defaults ("thrilled", "journey") and the one rule broken.
-
-**Request** (in Spanish): "Make the message telling a patient that their medical appointment was cancelled more human."
-
-**Result:** a calm, exact message in Spanish that says what happened, what the patient needs to do and where to rebook, with warmth instead of jokes. Facts the user did not give stay as placeholders. The notes, in Spanish, say that no rule was broken and explain why.
+For skill evaluation, use the [behavior cases](evals/evals.json) and [activation queries](evals/eval_queries.json).

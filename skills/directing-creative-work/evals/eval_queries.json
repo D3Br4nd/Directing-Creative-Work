@@ -7,8 +7,11 @@
   { "query": "Unser Newsletter-Intro klingt wie von einer KI geschrieben. Kannst du es origineller machen? \"Willkommen zu unserem Newsletter voller spannender Einblicke!\"", "should_trigger": true },
   { "query": "fix the grammar in this email to my accountant without changing the tone", "should_trigger": false },
   { "query": "riassumi questo articolo sul design generativo in cinque punti", "should_trigger": false },
-  { "query": "what are the main principles of the HUMAN.md manifesto by Briana May?", "should_trigger": false },
+  { "query": "what are the main principles in this creative manifesto?", "should_trigger": false },
   { "query": "write the API reference for the /orders endpoint from this OpenAPI file", "should_trigger": false },
   { "query": "traduis en anglais le texte de notre brochure, sans rien changer", "should_trigger": false },
-  { "query": "convert this CSV of monthly sales into a bar chart", "should_trigger": false }
+  { "query": "convert this CSV of monthly sales into a bar chart", "should_trigger": false },
+  { "query": "Traduci solo il titolo della campagna in tre proposte inglesi che conservino il gioco di parole.", "should_trigger": true },
+  { "query": "Notre affiche manque de caractère. Dis-moi ce qui la rend interchangeable, sans la réécrire.", "should_trigger": true },
+  { "query": "Extract the three slogans from these campaign notes verbatim as JSON.", "should_trigger": false }
 ]
