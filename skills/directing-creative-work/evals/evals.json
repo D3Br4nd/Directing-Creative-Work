@@ -1,0 +1,89 @@
+{
+  "skill_name": "directing-creative-work",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Scrivi il testo per la vetrina di un panificio di quartiere che apre il 3 dicembre in via del Pratello a Bologna. Si chiama Forno Nero, fa pane a lievitazione naturale e apre alle 7. Massimo 60 parole.",
+      "expected_output": "An Italian shop-window text of at most 60 words that keeps every fact (name, street, date, opening time, natural leavening), avoids generic bakery copy, is built on one anchor specific to this shop or street, and is followed by the Direction block and three next rounds, all with Italian headings.",
+      "files": [],
+      "assertions": [
+        "The piece is in Italian and has at most 60 words",
+        "The piece contains Forno Nero, via del Pratello, 3 dicembre and the 7 o'clock opening",
+        "The piece contains none of the phrases 'tradizione e innovazione', 'passione', 'qualità' or 'come una volta'",
+        "The piece is not a parody of an official notice or other document",
+        "The Direction block and next rounds use Italian headings",
+        "The Direction block names a broken rule and gives a reason tied to the reader",
+        "Exactly three numbered next rounds follow the Direction block"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "can you make this less generic? it's the hero of our landing page for a shared shopping-list app for flatmates: \"Empower your household with seamless collaboration. Organize, share and simplify your life.\"",
+      "expected_output": "A rewritten English headline and subline for a flatmates' shopping-list app, built on a concrete domestic scene rather than abstract benefits, with the Direction block naming the banned defaults and the broken rule, and three next rounds.",
+      "files": [],
+      "assertions": [
+        "The rewrite contains none of the words empower, seamless, simplify or collaboration",
+        "The rewrite mentions a concrete object, place or situation from shared-flat life",
+        "The rewrite claims no product feature the prompt did not mention",
+        "The Direction block lists what was avoided and one broken rule with its reason",
+        "Each Direction bullet is one sentence and the block is under 80 words",
+        "The reply delivers the rewritten copy before any explanation"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Make the message our banking app shows when a bank transfer fails more creative. Right now it says: \"Error 402. Operation failed.\"",
+      "expected_output": "A calm, clear English error message that says what happened, addresses whether money left the account without inventing it, and says what to do next, with warmth but no jokes. The notes state that no rule was broken, or that only a minor convention of form was, and why, and a To check line lists what the team must confirm.",
+      "files": [],
+      "assertions": [
+        "The message contains no joke, pun or playful exclamation",
+        "The message addresses whether the money was debited only through a placeholder, never as an unverified statement",
+        "The message tells the user what to do next",
+        "The Direction block explains the restraint with a reason tied to the user's situation",
+        "The message does not invent facts the prompt did not give, such as a specific refund time",
+        "Brackets in the message hold only data to fill in; caveats and conditions sit in the To check line, not inside the message"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write a LinkedIn post announcing that our logistics company, Ferrando Transport, has achieved ISO 14001 certification. Brand guidelines: institutional tone, no emoji, no exclamation marks, 120 words maximum. Make it a bit less boring than usual.",
+      "expected_output": "An English LinkedIn post of at most 120 words that respects every brand rule, breaks a convention only inside them, and uses placeholders for facts not given, such as the certifying body or the date.",
+      "files": [],
+      "assertions": [
+        "The post has at most 120 words",
+        "The post contains no emoji and no exclamation mark",
+        "The tone stays institutional: no line reads as a joke, a pun or mockery of the company or the certification",
+        "The post does not open with 'We are proud to announce' or a close variant",
+        "Facts not in the prompt, such as the certifying body, audit dates or emission figures, appear only as bracketed placeholders",
+        "The Direction block says which brand rule shaped the choice"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "dame tres ideas fuera de lo común para el vídeo de lanzamiento de nuestro helado de sésamo negro",
+      "expected_output": "Three fully developed video ideas in Spanish, each with its own short direction (broken rule and anchor), differing in their anchor, followed by one shared next-rounds list, with every heading in Spanish.",
+      "files": [],
+      "assertions": [
+        "The whole reply, headings included, is in Spanish",
+        "Exactly three ideas are given, each developed enough to brief a crew",
+        "Each idea is followed by its own broken rule and anchor",
+        "The three ideas rest on different anchors, not variations of one",
+        "One shared next-rounds list closes the reply",
+        "The reply invents no shop name, date or address; missing ones are placeholders"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "mi serve un nome per la mia newsletter sul vino naturale, ma niente di banale tipo 'Vino Vivo'",
+      "expected_output": "In Italian: a recommended name first, then four to six finished alternatives with different anchors, the Direction block in one-sentence bullets, three next rounds, and a To check line about checking availability.",
+      "files": [],
+      "assertions": [
+        "The reply leads with one recommended name, followed by four to six alternatives of one line each",
+        "No name is a portmanteau, a Latin root or a word ending in -ify, -ly or -io",
+        "Each Direction bullet is a single sentence and the block is under 80 words",
+        "Exactly three next rounds follow",
+        "Nothing appears after the To check line"
+      ]
+    }
+  ]
+}

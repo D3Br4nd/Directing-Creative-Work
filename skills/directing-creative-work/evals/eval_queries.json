@@ -1,0 +1,14 @@
+[
+  { "query": "I need a name for my natural-wine newsletter, but nothing obvious like 'Living Wine'", "should_trigger": true },
+  { "query": "this About page reads like ChatGPT wrote it, can you give it some soul? \"At Lumen Studio, we are passionate about delivering innovative design solutions that empower brands to thrive in today's digital landscape.\"", "should_trigger": true },
+  { "query": "scrivi l'incipit di un racconto su due fratelli che si rivedono in aeroporto dopo dieci anni", "should_trigger": true },
+  { "query": "design a landing page for an independent bookbindery in Turin, I want it to feel nothing like a SaaS template", "should_trigger": true },
+  { "query": "dame tres ideas fuera de lo común para el vídeo de lanzamiento de nuestro helado de sésamo negro", "should_trigger": true },
+  { "query": "Unser Newsletter-Intro klingt wie von einer KI geschrieben. Kannst du es origineller machen? \"Willkommen zu unserem Newsletter voller spannender Einblicke!\"", "should_trigger": true },
+  { "query": "fix the grammar in this email to my accountant without changing the tone", "should_trigger": false },
+  { "query": "riassumi questo articolo sul design generativo in cinque punti", "should_trigger": false },
+  { "query": "what are the main principles of the HUMAN.md manifesto by Briana May?", "should_trigger": false },
+  { "query": "write the API reference for the /orders endpoint from this OpenAPI file", "should_trigger": false },
+  { "query": "traduis en anglais le texte de notre brochure, sans rien changer", "should_trigger": false },
+  { "query": "convert this CSV of monthly sales into a bar chart", "should_trigger": false }
+]
