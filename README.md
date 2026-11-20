@@ -4,7 +4,7 @@
 
 **Stop getting the average. An Agent Skill that makes AI agents direct creative work instead of predicting it.**
 
-[![Version](https://img.shields.io/badge/version-0.5.0-ff5a36?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.6.0-ff5a36?style=flat-square)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2ea44f?style=flat-square)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-open%20standard-6f42c1?style=flat-square)](https://agentskills.io)
 [![Languages](https://img.shields.io/badge/replies%20in-any%20language-0a7ea4?style=flat-square)](#-any-language)
@@ -79,15 +79,17 @@ No setup, no dependencies, no API keys: the skill is pure instructions. Other in
 </td>
 <td>
 
-> In via del Pratello si fanno le ore piccole.
-> Il nostro pane pure: lievitazione naturale, nessuna fretta.
->
-> Alle 7 apriamo la porta.
-> Chi torna a casa e chi è appena uscito
-> si incrociano qui, davanti alla stessa pagnotta.
->
 > **FORNO NERO**
-> dal 3 dicembre
+> pane a lievitazione naturale
+>
+> Apriamo il 3 dicembre.
+> Fino ad allora aspettiamo:
+> è la cosa che sappiamo fare meglio.
+>
+> Poi, dalle 7 del mattino,
+> aspettiamo voi.
+>
+> *Via del Pratello, Bologna*
 
 </td>
 </tr>
@@ -129,7 +131,7 @@ flowchart LR
 
 ### What a reply looks like
 
-For a collaborative creative review, the piece comes first. Short notes explain the anchor, the choice it shaped and its effect on the audience. Two runner-up directions and one sharper development give the next round a starting point.
+For an open creative brief, the piece comes first. Up to three short notes follow: the obvious version it passed over and what the chosen one does for the audience, two other directions you can ask for, and any fact to confirm before publishing. Ask for the full reasoning and you get it.
 
 A request for two names as JSON gets an array with two names. A request for a poem alone gets the poem. A short functional message can include a separate editorial check if a fact needed for publication is missing.
 
@@ -179,7 +181,7 @@ cp -R Directing-Creative-Work/skills/directing-creative-work ~/.claude/skills/
 
 <br>
 
-Zip the folder and upload it as a custom skill in claude.ai settings (needs a paid plan with code execution enabled):
+Zip the folder and upload it as a custom skill in the claude.ai settings (code execution must be enabled):
 
 ```bash
 cd skills && zip -r ../directing-creative-work.zip directing-creative-work -x '*/.DS_Store'
@@ -192,7 +194,7 @@ cd skills && zip -r ../directing-creative-work.zip directing-creative-work -x '*
 
 <br>
 
-- Skills in `~/.claude/skills/` or `.claude/skills/` are picked up automatically. If `.claude/skills/` didn't exist when the session started, run `/reload-skills`.
+- Skills in `~/.claude/skills/` or `.claude/skills/` are picked up automatically. If the `skills` folder didn't exist when the session started, restart Claude Code.
 - Invoke it explicitly with `/directing-creative-work`.
 - Opened inside this repository, the skill is already available through the link in `.claude/skills/`.
 

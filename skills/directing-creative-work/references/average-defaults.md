@@ -83,6 +83,7 @@ The first clever twist is an average too: a capable model reaches the same twist
 - The fake apology or warning that turns a benefit into a mock complaint.
 - Owning the flaw: renaming the product's weakness as its badge, or "not for everyone".
 - The most familiar small mishap of the category as headline, the one every reader of the category has already seen joked about.
+- The best-known fact about the location, such as its nightlife, its history or its weather, as the whole idea. Every business in the same street could use it.
 - Withholding the image: a black screen, sound first, the subject shown only at the end.
 - Treating a website or a campaign as the object it is about (a book with an index and colophon, a menu, a ticket).
 
@@ -121,10 +122,10 @@ Each move breaks one convention. Use it only when you can say what it does for t
 
 ## Where to look instead
 
-Look first for a detail in the brief that changes a creative decision. Opening hours can shape the rhythm of a scene. A street name alone may only decorate an interchangeable idea. Other places to look include the following.
+Look first for a detail in the brief that changes a creative decision. How a product is made can set the rhythm of a piece. A place name alone may only decorate an interchangeable idea. Other places to look include the following.
 
 - The user's own world: a fact in the brief that no competitor shares, such as their street, their hours, their process, their customers' actual words.
-- Local specifics: one street's reputation, one shop sign, one dialect word, one regional habit.
+- Local specifics the brief supports: one shop sign, one dialect word, one regional habit. A place's general reputation is the anchor every neighbour reaches for.
 - Hands and crafts: how something is folded, stitched, bound, repaired or packed.
 - Obsolete technology: early animation toys, telegraph codes, punch cards, mechanical counters.
 - Other art forms: the tension in a particular painting, the timing of a comedian, the structure of a recipe.

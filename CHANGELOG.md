@@ -2,6 +2,14 @@
 
 All notable changes to this skill are recorded here. Versions follow [Semantic Versioning](https://semver.org) and match `metadata.version` in `skills/directing-creative-work/SKILL.md`.
 
+## [0.6.0] - 2026-11-20
+
+- Shortened the notes that follow a piece to at most three brief items: the obvious version passed over, two other directions and essential checks. A fuller rationale is available on request.
+- Replaced the worked example of an anchor with one from a different domain, and added the best-known fact about a location to the second-order defaults. A place's general reputation is no longer suggested as a source of anchors.
+- The piece now includes every fact the user supplied for it, and public copy grounds claims about how the business works in the brief.
+- Functional copy now keeps an unconfirmed state, such as whether a failed transfer moved money, as a placeholder inside the customer copy rather than as a caveat in the notes.
+- Added an evaluation for an open homepage brief and tightened the assertions on note length and unconfirmed payment status.
+
 ## [0.5.0] - 2026-11-18
 
 - Made the requested deliverable, language, count and edit scope take precedence over the default creative review. Short functional copy now carries only essential editorial checks.

@@ -21,7 +21,8 @@
       "assertions": [
         "The reply leads with usable hero copy.",
         "The scene makes the purpose of a shared shopping list intelligible and replaces the abstract benefits in the source.",
-        "The copy claims no feature beyond the shared list."
+        "The copy claims no feature beyond the shared list.",
+        "Any notes after the copy are shorter than the copy."
       ]
     },
     {
@@ -31,7 +32,7 @@
       "files": [],
       "assertions": [
         "The message identifies the failed transfer and preserves code 402.",
-        "The message reserves a field for the verified debit status and a field for a verified next step.",
+        "The customer copy states no debit status of its own: that line, and the next step, appear as placeholders to complete.",
         "The message promises no account state, refund time, safe retry, available control or support channel that the brief did not establish.",
         "Any instructions for the team to fill in the fields appear separately from customer copy."
       ]
@@ -112,6 +113,18 @@
         "The first two lines and their punctuation match the source exactly and occupy the same lines.",
         "Only the third line changes, and its tone is more restrained than the original ending.",
         "The complete reply contains only the three-line poem."
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Write the homepage hero for a small dog-grooming salon in Leeds called Scruff & Co. Nothing generic.",
+      "expected_output": "A usable English homepage hero built on something specific to this salon, followed by brief notes.",
+      "files": [],
+      "assertions": [
+        "The reply leads with hero copy a developer could place on the page: a headline, a supporting line and a call to action.",
+        "The idea depends on the salon or its customers rather than on a dog pun that any groomer could use.",
+        "Any notes after the hero are shorter than the hero.",
+        "Address, services, prices and the salon's methods are either absent or marked for confirmation, not stated as fact."
       ]
     }
   ]
